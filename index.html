@@ -185,5 +185,32 @@
       </div>
     </footer>
 
+    <div role="dialog" aria-labelledby="modal-title-1" aria-describedby="modal-desc-1">
+      <h4 id="modal-title-1" class="visually-hidden">Карта</h4>
+      <p id="modal-desc-1" class="visually-hidden">Отображение на карте место расположения нашего офиса</p>
+      <img src="img/modal-map.jpg" alt="карта" width="970" height="477">
+      <button type="button">Закрыть окно</button>
+    </div>
+
+    <div role="dialog" aria-labelledby="modal-title-2">
+      <h4 id="modal-title-2" class="visually-hidden">Форма заказа</h4>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="order-name">Ваше имя:</label>
+          <input type="text" name="name" id="order-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="order-mail">Ваш e-mail:</label>
+          <input type="text" name="email" id="order-mail" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="order-message">Текст письма:</label>
+          <textarea name="message" id="order-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Оформить заказ</button>
+      </form>
+      <button type="button">Закрыть окно</button>
+    </div>
+
   </body>
 </html>

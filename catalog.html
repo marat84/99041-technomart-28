@@ -101,13 +101,46 @@
 
         <section>
           <h3>Фильтр товаров</h3>
-          <form action="#">
+          <form action="https://echo.htmlacademy.ru" method="get">
             <fieldset>
               <legend>Производители:</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="Bosch" id="filter-manufacture-1" checked>
+                  <label for="filter-manufacture-1">Bosch</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="Interskol" id="filter-manufacture-2">
+                  <label for="filter-manufacture-2">Интерскол</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="Makita" id="filter-manufacture-3" checked>
+                  <label for="filter-manufacture-3">Makita</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="Dewalt" id="filter-manufacture-4">
+                  <label for="filter-manufacture-4">Dewalt</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="Hitachi" id="filter-manufacture-5">
+                  <label for="filter-manufacture-5">Hitachi</label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset>
               <legend>Питание:</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="supply" id="filter-supply-1" value="accumulator" checked>
+                  <label for="filter-supply-1">Аккумуляторные</label>
+                </li>
+                <li>
+                  <input type="radio" name="supply" id="filter-supply-2" value="network">
+                  <label for="filter-supply-2">Сетевые</label>
+                </li>
+              </ul>
             </fieldset>
+            <button type="submit" aria-label="Показать отфильтрованный товар">Показать</button>
           </form>
 
           <ul>
@@ -395,6 +428,13 @@
         </p>
       </div>
     </footer>
+
+    <div role="dialog" aria-labelledby="modal-title-3">
+      <h4 id="modal-title-3">Товар добавлен в корзину</h4>
+      <a href="blank.html">Оформить заказ</a>
+      <button type="button">Продолжить покупки</button>
+      <button type="button">Закрыть окно</button>
+    </div>
 
   </body>
 </html>
