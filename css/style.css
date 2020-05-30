@@ -1,0 +1,164 @@
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --basic-background-2: #293449;
+  --basic-white: #FFF;
+  --basic-black: #000;
+
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+
+  --color-success: #5FBB2D;
+  --color-warning: #FFBF47;
+  --color-error: #BA2732;
+
+  --gradient-light-grey: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
+
+  --font-name-1: 'Cuprum';
+  --font-name-2: 'PT Sans';
+}
+
+body {
+  font-family: var(--font-name-2), sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+
+  color: var(--basic-black);
+}
+
+a {
+  color: var(--basic-black);
+  text-decoration: none;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+
+a:hover {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+a:focus {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--basic-greylight);
+}
+
+.footer ul,
+.header ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.button {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+.button:active {
+  color: var(--color-error);
+}
+
+.header {
+  font-family: var(--font-name-1);
+  background-color: var(--basic-background);
+}
+
+.header-top {
+  background-color: var(--basic-background-2);
+  color: var(--basic-white);
+}
+
+.header-top a {
+  color: currentColor;
+}
+
+.header-top svg {
+  opacity: 0.5;
+}
+
+.search-form {
+}
+
+.header-top-link,
+.search-form-input {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.search-form-button {
+  background-color: transparent;
+  border: none;
+}
+
+.search-form:hover svg {
+  opacity: 1;
+}
+
+.header-top-link--bg {
+  background-color: #63A63E;
+}
+
+.company-desc {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+
+.header-phone-text {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+}
+
+.header-phone-address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425C;
+}
+
+.profile-list-link {
+  background-color: var(--basic-white);
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.nav {
+  color: white;
+  background-color: var(--basic-background-2);
+}
+
+.nav a {
+  font-size: 18px;
+  line-height: 24px;
+  color: currentColor;
+}
