@@ -66,7 +66,7 @@ html {
 
 body {
   min-width: 940px;
-  font-family: var(--font-name-2), "Arial";
+  font-family: var(--font-name-2), "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -94,13 +94,13 @@ a:hover {
   text-decoration: none;
 }
 
-ul {
+.reset-list {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-fieldset {
+.fieldset-reset {
   border: none;
   margin: 0;
   padding: 0;
@@ -124,7 +124,7 @@ img {
 
 a.button {
   color: var(--basic-white);
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
 }
 
 .button {
@@ -134,7 +134,7 @@ a.button {
   min-width: 192px;
   min-height: 38px;
   padding: 0 24px;
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -336,7 +336,7 @@ a.button {
 .modal-basket-title {
   display: inline-block;
   position: relative;
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -387,7 +387,7 @@ a.button {
 .form-label {
   display: block;
   margin-bottom: 10px;
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
 }
@@ -415,7 +415,7 @@ a.button {
 }
 
 .header {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   background-color: var(--basic-background);
   padding-bottom: 60px;
 }
@@ -591,6 +591,11 @@ a.button {
   margin-right: 22px;
 }
 
+.company-desc > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .header-phone-text {
   display: flex;
   align-items: center;
@@ -660,7 +665,7 @@ a.button {
   grid-column-gap: 10px;
 }
 
-.profile-account,
+.profile-account-wrap,
 .profile-list-link {
   display: inline-flex;
   align-items: center;
@@ -672,23 +677,26 @@ a.button {
   line-height: 21px;
 }
 
-.profile-account {
+.profile-account-wrap {
   min-width: auto;
   padding-left: 15px;
   padding-right: 17px;
   margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  margin-left: -18px;
 }
 
 .profile-account {
   display: flex;
   align-items: center;
-  margin-left: -18px;
 }
 
 .profile-account > svg {
   margin-right: 21px;
 }
 
+.profile-link path,
 .profile-account path {
   transition: fill 0.4s;
 }
@@ -702,10 +710,12 @@ a.button {
   color: var(--basic-greylight);
 }
 
+.profile-link:hover path,
 .profile-account:hover path {
   fill: var(--basic-grey);
 }
 
+.profile-link:active path,
 .profile-account:active path {
   fill: var(--basic-greylight);
 }
@@ -811,7 +821,7 @@ a.button {
 }
 
 .about-company-title {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -828,7 +838,7 @@ a.button {
 }
 
 .page-title {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   color: var(--basic-greydark);
   background-color: var(--basic-background);
   font-size: 30px;
@@ -869,7 +879,7 @@ a.button {
 
 .catalog-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 18px;
   font-weight: bold;
@@ -877,12 +887,7 @@ a.button {
   line-height: 18px;
   text-transform: uppercase;
   margin-bottom: 48px;
-}
-
-.catalog-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  width: 100%;
 }
 
 .catalog-list-name {
@@ -921,16 +926,22 @@ a.button {
   border-color: transparent transparent transparent var(--basic-red);
 }
 
-.catalog-list-notice,
+.new::before,
 .catalog-list-buy,
 .catalog-list-bookmark {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
 }
 
-.catalog-list-notice {
+.new {
+  position: relative;
+  overflow: hidden;
+}
+
+.new::before {
+  content: 'NEW';
   position: absolute;
   right: 0;
   top: 0;
@@ -1035,7 +1046,7 @@ a.button {
 }
 
 .about-company-list {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 20px;
@@ -1058,7 +1069,11 @@ a.button {
 
 .about-company-text-2 {
   margin-bottom: 1px;
+}
+
+.about-company-text-2 > p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .about-company-list li::before {
@@ -1075,7 +1090,7 @@ a.button {
 .footer {
   font-size: 18px;
   line-height: 24px;
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   background-color: var(--basic-greydark);
   color: var(--basic-white);
 }
@@ -1128,6 +1143,7 @@ a.button {
   line-height: 26px;
   padding-left: 3px;
   color: var(--basic-background);
+  max-width: 350px;
 }
 
 .footer-address a {
@@ -1136,10 +1152,10 @@ a.button {
   vertical-align: top;
 }
 
-.footer-bottom-text a:hover,
-.footer-address a:hover,
-.additional-menu a:hover,
-.footer-nav a:hover {
+.footer-bottom-text a[href]:hover,
+.footer-address a[href]:hover,
+.additional-menu a[href]:hover,
+.footer-nav a[href]:hover {
   text-decoration: underline;
 }
 
@@ -1172,6 +1188,7 @@ a.button {
 .copyright {
   font-size: inherit;
   line-height: inherit;
+  max-width: 250px;
 }
 
 .footer-social-section {
@@ -1190,6 +1207,10 @@ a.button {
 .footer-bottom-text {
   margin-left: 37px;
   margin-right: 14px;
+}
+
+.footer-bottom-text a {
+  display: block;
 }
 
 .footer-bottom-text a:active {
@@ -1268,7 +1289,7 @@ a.button {
 }
 
 .filter-section {
-  width: 220px;
+  max-width: 220px;
   margin-right: 20px;
 }
 
@@ -1277,7 +1298,7 @@ a.button {
 }
 
 .filter-section + .content-section {
-  width: 700px;
+  max-width: 700px;
 }
 
 .filter-list li:not(:last-child) {
@@ -1375,7 +1396,6 @@ a.button {
   box-shadow: 0 0 0 rgba(var(--basic-black-rgb), 0.0);
   text-align: center;
   min-height: 100%;
-  overflow: hidden;
   transition: box-shadow 0.4s;
 }
 
@@ -1497,7 +1517,7 @@ a.button {
 }
 
 .about-page-title {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-size: 30px;
   line-height: 26px;
   font-weight: normal;
@@ -1509,8 +1529,11 @@ a.button {
 .about-page-text {
   font-size: 13px;
   line-height: 24px;
-  margin-bottom: 0;
+}
+
+.about-page-text > p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .range-filter {
@@ -1675,7 +1698,7 @@ a.button {
 
 .sort-product-button:not(:last-child) {
   margin-left: 47px;
-  margin-right: 23px;
+  margin-right: 18px;
 }
 
 .sort-product-button:hover path {
@@ -1689,7 +1712,7 @@ a.button {
 
 .useful-link-wrap {
   margin-top: 59px;
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   margin-bottom: 59px;
 }
 
@@ -1699,8 +1722,6 @@ a.button {
   justify-content: center;
   align-items: flex-start;
   padding: 20px 20px 21px 22px;
-  position: relative;
-  overflow: hidden;
   background-color: var(--basic-grey);
   color: var(--basic-white);
   height: 100%;
@@ -1822,7 +1843,7 @@ a.button {
 }
 
 .section-title {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -1831,7 +1852,7 @@ a.button {
 }
 
 .section-link {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
 }
 
 .popular-company {
@@ -1844,7 +1865,7 @@ a.button {
 
 .company-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
   grid-auto-rows: minmax(145px, auto);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -2024,7 +2045,7 @@ a.button {
 
 .service-section-head h3 {
   margin-top: 0;
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -2074,10 +2095,11 @@ a.button {
   align-items: center;
   justify-content: flex-start;
   min-height: 61px;
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
+  padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
   background-color: var(--basic-greydark);
@@ -2133,12 +2155,22 @@ a.button {
 
 .service-image {
   position: absolute;
-  bottom: 2px;
+  top: 59px;
   right: 1px;
 }
 
+.service-image-2 {
+  right: -8px;
+  top: 36px;
+}
+
+.service-image-3 {
+  right: -10px;
+  top: 37px;
+}
+
 .service-content-title {
-  font-family: var(--font-name-1), "Arial";
+  font-family: var(--font-name-1), "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -2147,10 +2179,31 @@ a.button {
   letter-spacing: -0.8px;
 }
 
+.service-content-title-margin-bottom {
+  margin-bottom: 23px;
+}
+
+.service-content-title-margin-bottom-2 {
+  margin-bottom: 27px;
+}
+
 .service-content-text {
   font-size: 13px;
   line-height: 24px;
-  max-width: 300px;
+  max-width: 350px;
+  padding-bottom: 20px;
+}
+
+.service-content-text > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.service-content-button {
+  margin-top: 6px;
+  margin-bottom: 20px;
+  min-width: 195px;
+  border-radius: 3px;
 }
 
 
