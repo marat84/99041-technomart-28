@@ -241,7 +241,6 @@ a.button {
 
 .modal-form,
 .modal-basket {
-  top: 300px;
   bottom: auto;
   width: 620px;
   background-color: var(--basic-white);
@@ -251,7 +250,6 @@ a.button {
 .modal-map {
   width: 943px;
   height: 449px;
-  top: 298px;
   bottom: auto;
   left: -17px;
   border-top: 7px solid var(--basic-red);
@@ -1370,7 +1368,7 @@ a.button {
   outline-offset: 5px;
 }
 
-.radio[disabled] + label
+.radio[disabled] + label,
 .checkbox[disabled] + label {
   opacity: 0.3;
 }
@@ -2139,6 +2137,38 @@ a.button {
   display: none;
 }
 
+.service-content > section::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.service-content-tab-1::after {
+  top: 59px;
+  right: 1px;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/service-bg.png");
+}
+
+
+.service-content-tab-2::after {
+  top: 36px;
+  right: -8px;
+  width: 389px;
+  height: 283px;
+  background-image: url("../img/warranty-bg.png");
+}
+
+.service-content-tab-3::after {
+  top: 37px;
+  right: -10px;
+  width: 465px;
+  height: 285px;
+  background-image: url("../img/credit-bg.png");
+}
+
 .service-content > section.active {
   display: block;
   animation: blink 0.6s;
@@ -2151,22 +2181,6 @@ a.button {
   100% {
     opacity: 1;
   }
-}
-
-.service-image {
-  position: absolute;
-  top: 59px;
-  right: 1px;
-}
-
-.service-image-2 {
-  right: -8px;
-  top: 36px;
-}
-
-.service-image-3 {
-  right: -10px;
-  top: 37px;
 }
 
 .service-content-title {
