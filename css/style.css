@@ -2016,7 +2016,6 @@ a.button {
   flex-shrink: 0;
   width: 100%;
   padding: 23px 24px 16px;
-  background: rgba(var(--basic-black-rgb), 0.25);
 }
 
 .slider-head-title {
