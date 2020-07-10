@@ -1393,8 +1393,8 @@ a.button {
   outline-offset: 5px;
 }
 
-.radio[disabled] + label,
-.checkbox[disabled] + label {
+.radio:disabled + label,
+.checkbox:disabled + label {
   opacity: 0.3;
 }
 
