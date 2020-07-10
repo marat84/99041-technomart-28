@@ -1191,7 +1191,7 @@ a.button {
 
 .footer-social-section {
   margin-left: auto;
-  margin-right: 82px;
+  margin-right: 79px;
 }
 
 .footer-social {
@@ -1199,7 +1199,7 @@ a.button {
 }
 
 .footer-social li:not(:last-child) {
-  margin-right: 1px;
+  margin-right: 4px;
 }
 
 .footer-bottom-text {
