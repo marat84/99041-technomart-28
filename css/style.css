@@ -480,8 +480,7 @@ a.button {
   background-color: white;
 }
 
-.search-form:focus-within .search-form-button svg,
-.search-form-input:focus + .search-form-button svg {
+.search-form:focus-within svg {
   opacity: 1;
   fill: var(--basic-red);
 }
