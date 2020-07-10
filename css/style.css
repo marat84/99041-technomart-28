@@ -180,7 +180,7 @@ a.button {
 
 .modal {
   position: fixed;
-  top: 0;
+  top: 150px;
   left: 34px;
   right: 0;
   bottom: 0;
